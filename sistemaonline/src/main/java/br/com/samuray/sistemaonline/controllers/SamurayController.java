@@ -25,10 +25,22 @@ public class SamurayController {
         return ResponseEntity.ok(soma.toString());
     }
 
-    @RequestMapping("/aluno/{n3}/{n4}")
-    public ResponseEntity<String> getSubtrai(@PathVariable("n3") Integer n3, @PathVariable("n4") Integer n4){
-        Integer subtracao = n3-n4;
+    @RequestMapping("/aluno/{n1}/{n2}")
+    public ResponseEntity<String> getSubtrai(@PathVariable("n1") Integer n1, @PathVariable("n2") Integer n2){
+        Integer subtracao = n1-n2;
         return ResponseEntity.ok(subtracao.toString());
+    }
+
+    @RequestMapping("/aluno/{n1}/{n2}")
+    public ResponseEntity<String> getMultiplicacao(@PathVariable("n1") Integer n1, @PathVariable("n2") Integer n2){
+        Integer multiplicacao = n1*n2;
+        return ResponseEntity.ok(multiplicacao.toString());
+    }
+
+    @RequestMapping("/aluno/{n1}/{n2}")
+    public ResponseEntity<String> getDivisao(@PathVariable("n1") Integer n1, @PathVariable("n2") Integer n2){
+        Integer divisao = n1/n2;
+        return ResponseEntity.ok(divisao.toString());
     }
 
 
